@@ -4,7 +4,6 @@ resource "aws_launch_template" "ecs_lt" {
   instance_type = "t2.medium"
   network_interfaces {
     associate_public_ip_address = true
-    security_groups = ["sg-06cdd749bce5d8fad"]
     subnet_id = aws_subnet.subnet1.id
   }
   key_name               = "promvm"
